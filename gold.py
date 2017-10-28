@@ -9,16 +9,12 @@ data["appkey"] = "8a815caa8cc5e08c"
 
 url_value = urllib.urlencode(data)
 url = "http://api.jisuapi.com/gold/shgold"+"?"+url_value
-request = urllib2.Request(url)
-result = urllib2.urlopen(request)
-jsonarr = json.loads(result.read())
-print(jsonarr)
-
-start_time = dt.datetime.today().timestamp()
+#request = urllib2.Request(url)
+#result = urllib2.urlopen(request)
+#jsonarr = result.json()
+result = requests.get(url).json()
 i = 0
 while(i < 5):
   time.sleep(5)
-  print(i)
+  print(result["result"][0]["price"])
   i += 1
-
-
