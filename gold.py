@@ -99,10 +99,10 @@ client = Customer(name,password,gold,deposit)
 
 
 data = {}
-data["appkey"] = "8a815caa8cc5e08c"
+data["appkey"] = "apppkey"
 
 url_value = urllib.urlencode(data)
-url = "http://api.jisuapi.com/gold/shgold"+"?"+url_value
+url = "requested_url" + url_value
 #request = urllib2.Request(url)
 #result = urllib2.urlopen(request)
 #jsonarr = result.json()
